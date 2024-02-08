@@ -1,0 +1,26 @@
+{
+  "name": "tothewind",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "npm run clean-app && npm run clean-api",
+    "clean-api": "cd api && rm -rf node_modules",
+    "clean-app": "cd app && rm -rf node_modules dist",
+    "install-all": "npm run-script install-app && npm run-script install-api",
+    "install-api": "cd api && npm install",
+    "install-app": "cd app && npm install",
+    "build": "npm run-script build-app && npm run-script build-api",
+    "build-api": "echo \"There is nothing to build.\"",
+    "build-app": "npm run install-app && cd app && npm run build",
+    "compose": "docker-compose -f 'docker-compose.yml' up -d --build",
+    "start": "npm run build && npm run compose",
+    "debug": "npm run build && docker-compose -f 'docker-compose.debug.yml' up -d --build",
+    "start-debug": "npm run build && npm run debug",
+    "stop": "docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ProphetsAI/toTheWind.git"
+  },
+  "author": "Robert Meissner <robert.meissner@outlook.com>",
+  "license": "MI"
+}

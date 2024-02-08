@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: app
+    environment:
+      NODE_ENV: development
+    image: app:latest
+    links:
+      - api
+    ports:
+      - 8080:80
+    restart: always
+
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: ./api
+    command: npm run debug
+    container_name: api
+    environment:
+      API_PORT: 3000
+      NODE_ENV: development
+    image: api:latest
+    links:
+      - postgres
+    ports:
+      - 3000:3000
+      - 9229:9229
+    restart: always
+
+  postgres:
+    image: postgres
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: "ddd"
+      POSTGRES_PASSWORD: "53c237"
+      POSTGRES_DB: "ddd"

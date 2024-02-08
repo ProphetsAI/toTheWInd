@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    "alexcvzz.vscode-sqlite",
+    "alexdima.copy-relative-path",
+    "coenraads.bracket-pair-colorizer-2",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "kisstkondoros.vscode-gutter-preview",
+    "miguelsolorio.min-theme",
+    "msjsdiag.debugger-for-chrome",
+    "ms-azuretools.vscode-cosmosdb",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-ssh-edit",
+    "ms-vsliveshare.vsliveshare",
+    "octref.vetur",
+    "pflannery.vscode-versionlens",
+    "pkief.material-icon-theme",
+    "sdras.night-owl",
+    "sdras.vue-vscode-snippets",
+    "tombonnike.vscode-status-bar-format-toggle",
+    "visualstudioexptteam.vscodeintellicode"
+  ]
+}

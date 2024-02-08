@@ -1,0 +1,11 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "strict": "warn",
+    "no-trailing-spaces": "warn",
+    "indent": ["warn", 2, { "VariableDeclarator": "first" }]
+  }
+}

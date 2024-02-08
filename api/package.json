@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Process Engine",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "debug": "node --inspect=0.0.0.0:9229 server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Paul Meissner <me.jahro@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^4.3.1",
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "processenv": "^3.0.5"
+  }
+}

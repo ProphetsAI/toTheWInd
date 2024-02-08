@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "Process Engine",
+      "path": "."
+    },
+    {
+      "name": "Backend API",
+      "path": "api"
+    },
+    {
+      "name": "Frontend App",
+      "path": "app"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "{app,api}": true
+    },
+    "debug.node.autoAttach": "on"
+  }
+}

@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: app
+    environment:
+      NODE_ENV: production
+    image: app:latest
+    links:
+      - api
+    ports:
+      - 8080:80
+    restart: always
+
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: ./api
+    container_name: api
+    environment:
+      API_PORT: 3000
+      NODE_ENV: production
+    image: api:latest
+    links:
+      - postgres
+    ports:
+      - 3000:3000
+    restart: always
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: "ddd"
+      POSTGRES_PASSWORD: "53c237"
+      POSTGRES_DB: "ddd"
